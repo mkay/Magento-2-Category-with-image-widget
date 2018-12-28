@@ -70,7 +70,8 @@ class CatewithimgWidget extends \Magento\Framework\View\Element\Template impleme
         $collection = $category
                       ->getCollection()
                       ->addAttributeToSelect('image')
-                      ->addIdFilter($rootCat);
+                      ->addIdFilter($rootCat)
+		      ->setOrder('position');
         return $collection;
     }
     /**
